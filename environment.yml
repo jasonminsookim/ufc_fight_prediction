@@ -96,7 +96,7 @@ dependencies:
   - pandas=0.24.2=py27h86efe34_0
   - pandoc=2.7.3=0
   - pandocfilters=1.4.2=py_1
-  - parsel=1.0.1=py27_0
+  - parsel=1.5.1=py27_0
   - parso=0.4.0=py_0
   - pathlib2=2.3.3=py27_1000
   - pcre=8.41=h0a44026_1003
@@ -138,7 +138,7 @@ dependencies:
   - rsa=3.4.2=py_1
   - s3transfer=0.2.1=py27_0
   - scandir=1.10.0=py27h1de35cc_0
-  - scrapy=1.2.0=py27_0
+  - scrapy=1.5.2=py27_0
   - scrapylib=1.7.0=py27_0
   - send2trash=1.5.0=py_0
   - service_identity=18.1.0=py_0

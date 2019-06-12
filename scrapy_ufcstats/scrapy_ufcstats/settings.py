@@ -9,6 +9,9 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+CLOSESPIDER_PAGECOUNT= 20  # so end after 20 pages have been crawled
+
+
 BOT_NAME = 'scrapy_ufcstats'
 
 SPIDER_MODULES = ['scrapy_ufcstats.spiders']
@@ -19,7 +22,7 @@ NEWSPIDER_MODULE = 'scrapy_ufcstats.spiders'
 #USER_AGENT = 'scrapy_ufcstats (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -46,13 +49,15 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+#SPIDER_MIDDLEWARES = {
+#    'scrapy_ufcstats.middlewares.ScrapyUfcstatsSpiderMiddleware': 543,
+#}
+
 SPIDER_MIDDLEWARES = {
     'scrapylib.deltafetch.DeltaFetch': 100,
 }
 
 DELTAFETCH_ENABLED = True
-
-
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -92,3 +97,4 @@ DELTAFETCH_ENABLED = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
