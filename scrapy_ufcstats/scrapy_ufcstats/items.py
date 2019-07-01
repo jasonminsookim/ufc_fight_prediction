@@ -11,4 +11,9 @@ import scrapy
 class ScrapyUfcstatsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    fighter_1 = scrapy.Field()
+    fighter_1_nn = scrapy.Field()
+    fighter_2 = scrapy.Field()
+    fighter_2_nn = scrapy.Field()
+    winner = scrapy.Field()
+

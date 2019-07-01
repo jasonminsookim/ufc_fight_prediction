@@ -9,7 +9,7 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-CLOSESPIDER_PAGECOUNT= 20  # so end after 20 pages have been crawled
+CLOSESPIDER_PAGECOUNT = 30  # so end after 50 pages have been crawled
 
 
 BOT_NAME = 'scrapy_ufcstats'
@@ -23,6 +23,8 @@ NEWSPIDER_MODULE = 'scrapy_ufcstats.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
+
+DOWNLOAD_DELAY = 0.40    # 33 ms of delay
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -54,7 +56,7 @@ ROBOTSTXT_OBEY = False
 #}
 
 SPIDER_MIDDLEWARES = {
-    'scrapylib.deltafetch.DeltaFetch': 100,
+    'scrapylib.deltafetch.DeltaFetch': 100
 }
 
 DELTAFETCH_ENABLED = True
